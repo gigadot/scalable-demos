@@ -1,0 +1,43 @@
+# run quick demo
+node server.js
+
+# using k8s' docker env
+eval $(minikube docker-env)
+
+# run the container
+kubectl run hello-node --image=hello-node:v1 --port=8080 --image-pull-policy=Never
+
+# create a service
+kubectl expose deploy/hello-node --type=LoadBalancer
+
+# display things inside k8s
+kubectl get {po, svc, deploy}
+
+# list services exposed
+minikube service list
+
+# get the logs
+kubectl logs deploy/hello-node
+
+May wish to enable something
+minikube addons enable kube-dns
+minikube addons list
+
+
+## Upgrading the app
+
+Let's change the server.js file
+
+Rebuild docker img - docker build -t hello-node:v2 helloworld/
+
+# Update the image
+kubectl set image deploy/hello-node hello-node=hello-node:v2
+
+## Undoing all
+
+kubectl delete ...
+
+minikube stop
+eval $(minikube docker-env -u)
+
+

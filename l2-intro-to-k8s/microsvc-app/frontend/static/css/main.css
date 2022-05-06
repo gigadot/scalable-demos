@@ -1,0 +1,107 @@
+body {
+    background-color: lightgray;
+    font-family: Helvetica;
+    line-height: 1.5;
+}
+
+#page {
+	  margin: 1.5em auto 3em auto;
+	  background-color: white;
+	  padding: 2em 3em 1.5em 3em;
+	  border: 1px solid #ccc;
+	  box-shadow: 2px 2px 8px #aaa;
+    max-width: 768px;
+}
+
+.highlighted {
+  padding-left: 1em;
+  padding-top: 0px;
+  margin-top: 0px;
+  background-color: #eee;
+  border: 1px solid #aaa;
+}
+.notopmargin {
+  margin-top: 0.25em;
+}
+.container {
+  min-width: 480px;
+}
+h1 {
+    /*  color: #8457FF; */
+    /*  color: #703CFF;*/
+    /*color: #00A5FF;*/ /* 00537F; */
+    color: black;
+    opacity: .75;
+    font-weight: bold;
+}
+h2 {
+  font-size: 1.75em;
+}
+h2,h3,h4 {
+    color: #00537F; /*26607F; */
+    margin-bottom: 0.2em;
+    padding-bottom: 0;
+}
+h3 {
+  font-size: 1.25em;
+  padding-bottom: 0.2em;
+}
+
+code {
+  background-color: transparent;
+  color: navy;
+}
+
+/*
+ * Schedule CSS
+ */
+
+#schedule  {
+  list-style: none;
+  padding-left: 0em;
+  margin-top: 15px;
+}
+#schedule .week {
+  border-top: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.week li {
+  list-style: none;
+}
+
+.week h3 {
+  float: left;
+  font-size: 16px;
+  color: black;
+  opacity: .8;
+  font-weight: 300;
+}
+.week .events {
+  margin-left: 110px;
+}
+.events dt {
+  color: #999;
+  float: left;
+  font-size: 12px;
+}
+.events dd {
+  font-size: 14px;
+  margin-left: 50px;
+  margin-bottom: 5px;
+}
+.events .label {
+  border: 1px solid #9f3ed5;
+  color: #7109aa;
+  font-family: Helvetica;
+  font-weight: lighter;
+  font-size: 11px;
+  margin-right: 3px;
+  padding: 0 3px;
+  position: relative;
+  top: -1px;
+}
+.events .link {
+  font-size: 12px;
+  line-height: 12px;
+}
