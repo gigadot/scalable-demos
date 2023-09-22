@@ -1,4 +1,0 @@
-# Tips
-
-Access the cluster via a busybox shell
-kubectl run -i --tty busybox --image=busybox --restart=Never -- sh
